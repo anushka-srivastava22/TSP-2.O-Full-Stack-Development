@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>JS</title>
+    </head>
+    <body>
+        <h1>JS Example</h1>
+        <button id="btn" onclick="myfun()">Click Me </button>
+        <button id="btn1" onclick="myfun1()">Click Me </button><br/><br/>
+        NAME : <input type="text" id="name" onchange="myfun2()">
+        <script>
+            
+            confirm("are u sure?")
+            prompt("Enter you name : ")
+            var x = 22;
+            document.write("value : "+x + "<br/>");
+            function myfun()
+            {
+                document.getElementById("btn").innerHTML="OOPS ! You have clicked me...";
+            }
+            function myfun1()
+            {
+                document.getElementById("btn1").innerHTML=Date();
+            }
+           
+            function myfun2()
+            {
+                const m = document.getElementById("name");
+                m.value = m.value.toUpperCase();
+            }
+            function formvalidate()
+            {
+                let y = document.getElementById("name").value;
+                let p = /[a-z]+/;
+                let z = p.test(y);
+                document.write(z);
+                if(y=="")
+                {
+                    alert("Name req");
+                }
+                if(z!=y)
+                {
+                    alert("Enter valid name");
+                }
+            }
+        </script>
+    </body>
+</html>

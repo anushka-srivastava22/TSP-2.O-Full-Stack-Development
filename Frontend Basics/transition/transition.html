@@ -1,0 +1,73 @@
+<head>
+    <title>
+        Transitions
+    </title>
+    <style>
+        div {
+            height: 350px;
+            width: 30%;
+            background-color: orange;
+            border: solid 4px purple;
+        }
+        div:hover {
+            transform: translate(50px, 50px);
+        }
+        .div1 {
+            height: 350px;
+            width: 30%;
+            border: solid 4px purple;
+            margin: 50px;
+            background-color: orangered;
+            transition-property: width, height;
+            transition-duration: 5s;
+            
+        }
+        .div1:hover {
+            width:90%;
+            height: 50px;
+        }
+        .div2 {
+            height: 50px;
+            width: 50px;
+            border: solid 4px purple;
+            margin: 50px;
+            transition-timing-function: ease-out;
+            transition-property: width 5s, height 5s, transform 5s;
+            background-color: orangered;
+        }
+        .div2:hover {
+           
+            width:500px;
+            height: 500px;
+            transform: rotate(180deg);
+        }
+        @keyframes demo {
+            from {width: 250px; height: 250px; background-color: blue;}
+            to {width: 500px; height: 500px ; background-color: red;}
+        }
+        .div3 {
+            height: 250px;
+            width: 250px;
+            border: solid 4px purple;
+            margin: 50px;
+            animation-name: demo;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        This is division
+    </div>
+    <div class="div1">
+        This is first div
+    </div>
+    <div class="div2">
+        This is second div
+    </div>
+    <div class="div3">
+        
+    </div>
+</body>
